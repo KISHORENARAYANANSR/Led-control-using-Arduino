@@ -1,4 +1,4 @@
-# Led-control-using-Arduino
+# Ex-1 Led-control-using-Arduino
 
 ## AIM
 To design and implement a system for LED control using an Arduino microcontroller and a push button.
@@ -58,9 +58,39 @@ Emergency Signaling System </br>
 Weighing Machines </br>
 
 ## CIRCUIT DIAGRAM
+![image](https://github.com/user-attachments/assets/74b21560-ea1b-40fd-8bd2-b3f4cabb711a)
 
 ## PROGRAM
+```
+int buttonState = 0;        
+void setup() {
+  pinMode(13, OUTPUT);
+  pinMode(7, OUTPUT);
+  pinMode(0, INPUT);
+}
+void loop() {
+    buttonState = digitalRead(0);
+  if (buttonState == HIGH)
+ {
+       digitalWrite(13, HIGH);
+       digitalWrite(7, LOW);
+  } else
+{
+   
+    digitalWrite(13, LOW);
+    digitalWrite(7, HIGH);
+  }
+}
+```
 
 ## OUTPUT
+### LED ON:
+![image](https://github.com/user-attachments/assets/7c5f82f9-afed-4619-a5b7-4e67cf9340d0)
+
+### LED OFF:
+![image](https://github.com/user-attachments/assets/dc1eb43f-18ba-4c4e-af76-5df691414f26)
+
+
 
 ## RESULT
+The LED control system using Arduino and push button was successfully implemented and simulated in Proteus.
